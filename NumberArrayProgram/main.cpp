@@ -102,5 +102,25 @@ int main()
     left.print();
     right.print();
 
+    // Assignment operator: size differences
+    NumberArray small(2);
+    NumberArray large(10);
+
+    small.setNumber(0, 2.5);
+    small.setNumber(1, 3.5);
+
+    large = small;
+
+    small.print();
+    large.print();
+
+    // Self-assignment handled properly
+    NumberArray ex(1);
+    ex.setNumber(0, 9.9);
+
+    ex = ex;
+
+    ex.print();
+
     return 0;
 }
