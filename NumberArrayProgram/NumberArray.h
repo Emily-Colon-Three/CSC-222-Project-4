@@ -1,5 +1,5 @@
 /* This header file acts as the definition and declaration of the NumberArray class. This class serves as a dynamically allocated array of doubles, having member functions to access data
-from these NumberArray objects and make calculations based off of it.*/
+from these NumberArray objects and make calculations based off of it. Additionally, it has built-in protections to ensure copying and assigning objects causes no memory leaks or errors.*/
 #ifndef DATE_H
 #define DATE_H
 

@@ -27,6 +27,25 @@ NumberArray::NumberArray(int s = DEFAULT_SIZE) // s means size in this case
     }
 }
 
+/*
+    Summary: A constructor function overload which copies the contents of a NumberArray object into a brand new one, creating a deep copy.
+    Parameters: A constant reference to the array being copied, called "other".
+    Return: None
+    Preconditions: Nothing of particular importance; the class makes sure no objects have uninitialized data.
+    Postconditions: A new NumberArray object is created with identical data to the one in the parameters. The object copied from will not be changed due to its constant nature, ensuring no accidental changes.
+*/
+NumberArray::NumberArray(const NumberArray& other)
+{
+    NumberArray::size = other.size; // Syncs sizes
+
+    NumberArray::data = new double[size];
+
+    for (int i = 0; i < NumberArray::size; i++) // Loops through all the elements to copy data from other to the new object
+    {
+        NumberArray::data[i] = other.data[i];
+    }
+}
+
 NumberArray::~NumberArray()
 {
     delete[] NumberArray::data; // Frees up all allocated memory from data
