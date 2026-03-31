@@ -1,3 +1,5 @@
+/* This header file acts as the definition and declaration of the NumberArray class. This class serves as a dynamically allocated array of doubles, having member functions to access data
+from these NumberArray objects and make calculations based off of it.*/
 #ifndef DATE_H
 #define DATE_H
 
@@ -9,7 +11,12 @@ private:
 public:
     NumberArray(); // Overloaded, this one has no parameters.
     NumberArray(int);
+
+    NumberArray(const NumberArray& other); // Copy constructor
+
     ~NumberArray();
+
+    NumberArray& operator=(const NumberArray& src); // Overloaded assignment operator
 
     void setNumber(int, double);
 
