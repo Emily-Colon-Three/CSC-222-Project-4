@@ -60,5 +60,24 @@ int main()
     arr5.print();
     cout << arr5.getMin() << endl << arr5.getAverage() << endl << arr5.getMax() << endl;
 
+    // Copy constructor test
+    NumberArray og(5);
+
+    og.setNumber(0, 2.2);
+    og.setNumber(1, 3.6);
+    og.setNumber(2, 0.1);
+    og.setNumber(3, 7.9);
+    og.setNumber(4, 4.7);
+
+    NumberArray ogCopy(og);
+
+    og.print();
+    ogCopy.print();
+
+    og.setNumber(0, 1.0); // Modifies original NumberArray
+
+    og.print();
+    ogCopy.print();
+
     return 0;
 }
