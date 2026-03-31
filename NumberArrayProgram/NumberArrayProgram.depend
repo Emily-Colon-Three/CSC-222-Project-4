@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1773807381 source:/home/paulmichaelolsen/VPCC Assignnments/CSC 222/Project 3/NumberArrayProgram/main.cpp
+	<iostream>
+	<random>
+	"NumberArray.h"
+
+1773806463 /home/paulmichaelolsen/VPCC Assignnments/CSC 222/Project 3/NumberArrayProgram/NumberArray.h
+
+1773805833 source:/home/paulmichaelolsen/VPCC Assignnments/CSC 222/Project 3/NumberArrayProgram/NumberArray.cpp
+	"NumberArray.h"
+	<iostream>
+
