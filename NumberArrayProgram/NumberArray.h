@@ -16,7 +16,7 @@ public:
 
     ~NumberArray();
 
-    NumberArray& operator=(const NumberArray& src); // Overloaded assignment operator
+    NumberArray& operator=(const NumberArray& right); // Overloaded assignment operator
 
     void setNumber(int, double);
 

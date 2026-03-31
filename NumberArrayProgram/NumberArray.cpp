@@ -53,6 +53,37 @@ NumberArray::~NumberArray()
     std::cout << "Memory de-allocated.\n"; // Prints message confirming memory release
 }
 
+/*
+    Summary: Acts as a more advanced version of the default assignment operator; it makes an object identical yet separate to a specified NumberArray object, checking for self-assignment.
+    Parameters: A constant reference to the object on the right hand side of the assignment operator is passed in, called "right".
+    Return: A pointer to the object having right's data assigned to it, this.
+    Preconditions: None
+    Postconditions: The memory of the left, or changed object, is cleared away, allocated for the size of the right object, then filled with data copied over from the right. Nothing changes in the case of self-assignment.
+*/
+NumberArray& NumberArray::operator=(const NumberArray& right)
+{
+    // Checks for self-assignment
+    if (this == &right)
+    {
+        return *this;
+    }
+
+    // De-allocate memory of this object
+    delete[] data;
+
+    // Allocate new memory (size could vary, after all)
+    size = right.size;
+    data = new double[size];
+
+    // Copy over the data from the right side of assignment into this object
+    for (int i = 0; i < size; i++)
+    {
+        data[i] = right.data[i];
+    }
+
+    return *this;
+}
+
 void NumberArray::setNumber(int i, double val)
 {
     if (i < NumberArray::size && i >= 0)
