@@ -4,6 +4,8 @@
 
 using namespace std;
 
+NumberArray scopeTransfer(int size);
+
 int main()
 {
     // Testing round 1: Default construction
@@ -122,5 +124,18 @@ int main()
 
     ex.print();
 
+    // Destructor and Lifetimes (block scope)
+    NumberArray inMain(5);
+    inMain = scopeTransfer(5);
+
     return 0;
+}
+
+// Creates a temporary NumberArray object of size specified in the parameter, before returning it to let it escape the block scope.
+NumberArray scopeTransfer(int size)
+{
+    NumberArray temp(size);
+    temp.setNumber(0, 8.4);
+
+    return temp;
 }
