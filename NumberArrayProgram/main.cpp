@@ -79,5 +79,28 @@ int main()
     og.print();
     ogCopy.print();
 
+    // Assignment Operator test
+    NumberArray left(3);
+    NumberArray right(3);
+
+    right.setNumber(0, 1.0);
+    right.setNumber(1, 2.0);
+    right.setNumber(2, 3.0);
+
+    left = right;
+
+    left.print();
+    right.print();
+
+    right.setNumber(0, 0.5);
+
+    left.print();
+    right.print();
+
+    left.setNumber(2, 3.5);
+
+    left.print();
+    right.print();
+
     return 0;
 }
