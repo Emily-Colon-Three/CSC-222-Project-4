@@ -2,6 +2,7 @@
 #include <string>
 #include <sstream>
 #include <iostream>
+#include <cmath>
 
 // Constants for month numbers
 const int MONTH_JAN = 1;
@@ -445,61 +446,39 @@ int Date::operator-(const Date date)
     int total = 0;
     int finalYear;
 
+    Date earlier;
+    Date later;
+
     if (this->year < date.year)
     {
-        for (int y = this->year; y < date.year; y++)
-        {
-            if (isLeapYear(y))
-            {
-                total += 366;
-            }
-            else
-            {
-                total += 365;
-            }
-
-            finalYear = y;
-        }
+        earlier.setDate(this->month, this->day, this->year);
+        later.setDate(date.month, date.day, date.year);
     }
     else if (this->year > date.year)
     {
-        for (int y = date.year; y < this->year; y++)
-        {
-            if (isLeapYear(y))
-            {
-                total += 366;
-            }
-            else
-            {
-                total += 365;
-            }
-
-            finalYear = y;
-        }
+        earlier.setDate(date.month, date.day, date.year);
+        later.setDate(this->month, this->day, this->year);
     }
-    else
+    else if (this->month < date.month)
     {
-        finalYear = this->year;
+        earlier.setDate(this->month, this->day, this->year);
+        later.setDate(date.month, date.day, date.year);
+    }
+    else if (this->month > date.month)
+    {
+        earlier.setDate(date.month, date.day, date.year);
+        later.setDate(this->month, this->day, this->year);
+    }
+    else // The month and year is the same
+    {
+        return abs(this->day - date.day);
     }
 
-    // At this point, the year difference is accounted for.
-    if (this->month < date.month)
+    // Count how many days from earlier to later date (slow, but functional)
+    while ((earlier.day != later.day) || (earlier.month != later.month) || (earlier.year != later.year))
     {
-        for (int m = this->month; m < date.month; m++)
-        {
-            total += lastDay(m, finalYear);
-        }
-
-        total += date.day - this->day;
-    }
-    if (this->month > date.month)
-    {
-        for (int m = date.month; m < this->month; m++)
-        {
-            total += lastDay(m, finalYear);
-        }
-
-        total += this->day - date.day;
+        ++earlier;
+        total++;
     }
 
     return total;

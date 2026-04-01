@@ -25,5 +25,16 @@ int main()
     regular.setDate(2, 29, 2009);
     cout << regular.getFormatDMY() << endl;
 
+    // Subtraction Operator
+    Date dateOne(2014, 4, 18);
+    Date dateTwo(2014, 4, 10);
+
+    cout << (dateOne - dateTwo) << " days.\n";
+
+    dateOne.setDate(2, 2, 2006);
+    dateTwo.setDate(11, 10, 2003);
+
+    cout << (dateOne - dateTwo) << " days.\n";
+
     return 0;
 }
