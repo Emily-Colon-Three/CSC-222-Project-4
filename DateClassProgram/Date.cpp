@@ -382,6 +382,52 @@ Date Date::operator++(int)
     return temp;
 }
 
+/*
+    Summary: Turns the date held within Date backwards by a single day, following calendar rules.
+    Parameters: None
+    Return: Pointer to changed Date object
+    Preconditions: None
+    Postconditions: The object which this operation is applied to will have its date turned back by 1 day.
+*/
+Date& Date::operator--()
+{
+    if (this->day <= 1)
+    {
+        if (this->month <= 1)
+        {
+            this->day = this->lastDay(12, this->year);
+            this->month = 12;
+            this->year -= 1;
+        }
+        else
+        {
+            this->day = this->lastDay();
+            this->month -= 1;
+        }
+    }
+    else
+    {
+        this->day -= 1;
+    }
+
+    return *this;
+}
+
+/*
+    Summary: Decrements the date held within a Date object by 1, but returns a version of the object's data from before the update.
+    Parameters: None
+    Return: A whole Date object which reflects the state of the object before operator is applied.
+    Preconditions: None
+    Postconditions: The object itself is altered to be a day before the initial date.
+*/
+Date Date::operator--(int)
+{
+    Date temp = *this;
+
+    ++*this;
+    return temp;
+}
+
 // Friend overloads
     std::ostream& operator<<(std::ostream& out, Date& date);
     std::istream& operator>>(std::istream& in, Date& date);
