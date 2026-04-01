@@ -45,5 +45,15 @@ int main()
     cout << (x++).getFormatDMY() << endl;
     cout << (x--).getFormatDMY() << endl;
 
+    Date y(2024, 12, 31);
+
+    y++;
+    cout << y.getFormatDMY() << endl;
+    y--;
+    cout << y.getFormatDMY() << endl;
+
+    cout << (++y).getFormatDMY() << endl;
+    cout << (--y).getFormatDMY() << endl;
+
     return 0;
 }
