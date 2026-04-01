@@ -407,8 +407,8 @@ Date& Date::operator--()
         }
         else
         {
-            this->day = this->lastDay();
             this->month -= 1;
+            this->day = this->lastDay();
         }
     }
     else

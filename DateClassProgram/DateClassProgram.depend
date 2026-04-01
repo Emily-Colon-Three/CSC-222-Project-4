@@ -11,17 +11,18 @@
 	<string>
 	<sstream>
 
-1775017691 source:/home/paulmichaelolsen/VPCC Assignnments/CSC 222/M4 Programming Project/DateClassProgram/main.cpp
+1775021813 source:/home/paulmichaelolsen/VPCC Assignnments/CSC 222/M4 Programming Project/DateClassProgram/main.cpp
 	<iostream>
 	"Date.h"
 
-1775017085 /home/paulmichaelolsen/VPCC Assignnments/CSC 222/M4 Programming Project/DateClassProgram/Date.h
+1775021770 /home/paulmichaelolsen/VPCC Assignnments/CSC 222/M4 Programming Project/DateClassProgram/Date.h
 	<string>
 	<iostream>
 
-1775017039 source:/home/paulmichaelolsen/VPCC Assignnments/CSC 222/M4 Programming Project/DateClassProgram/Date.cpp
+1775021768 source:/home/paulmichaelolsen/VPCC Assignnments/CSC 222/M4 Programming Project/DateClassProgram/Date.cpp
 	"Date.h"
 	<string>
 	<sstream>
 	<iostream>
+	<cmath>
 

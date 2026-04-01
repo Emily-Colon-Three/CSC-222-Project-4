@@ -36,5 +36,14 @@ int main()
 
     cout << (dateOne - dateTwo) << " days.\n";
 
+    // Increment and Decrement
+    Date x(2008, 2, 29);
+
+    cout << (++x).getFormatDMY() << endl;
+    cout << (--x).getFormatDMY() << endl;
+
+    cout << (x++).getFormatDMY() << endl;
+    cout << (x--).getFormatDMY() << endl;
+
     return 0;
 }
