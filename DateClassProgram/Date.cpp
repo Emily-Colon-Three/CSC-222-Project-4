@@ -367,6 +367,21 @@ Date& Date::operator++()
     return *this;
 }
 
+/*
+    Summary: Increments the date stored in Date object, then returns a version of the object pre-update.
+    Parameters: None
+    Return: A full Date object, data captured from before the increment was applied.
+    Preconditions: None.
+    Postconditions: Changes the actual data of the object the overloaded operation is applied to, despite that updated version not being the return.
+*/
+Date Date::operator++(int)
+{
+    Date temp = *this; // Stores original data temporarily
+
+    ++*this; // Increments Date object
+    return temp;
+}
+
 // Friend overloads
     std::ostream& operator<<(std::ostream& out, Date& date);
     std::istream& operator>>(std::istream& in, Date& date);
