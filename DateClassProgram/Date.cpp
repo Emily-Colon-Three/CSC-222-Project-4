@@ -336,6 +336,37 @@ std::string Date::getFormatDMY() const
     return format;
 }
 
+/*
+    Summary: Increments the date stored in a Date object by 1 day, following calendar rules.
+    Parameters: None
+    Return: A reference to the now-updated Date object.
+    Preconditions: None
+    Postconditions: The object on which this operation is applied to will have its day, month, and possibly year changed, depending on the exact date held.
+*/
+Date& Date::operator++()
+{
+    if (this->day >= this->lastDay())
+    {
+        if (this->month >= 12) // If month is the last of the year
+        {
+            this->day = 1;
+            this->month = 1;
+            this->year += 1; // Year goes up when date resets
+        }
+        else
+        {
+            this->day = 1;
+            this->month += 1; // Month goes up when the last day is passed
+        }
+    }
+    else
+    {
+        this->day += 1;
+    }
+
+    return *this;
+}
+
 // Friend overloads
     std::ostream& operator<<(std::ostream& out, Date& date);
     std::istream& operator>>(std::istream& in, Date& date);
