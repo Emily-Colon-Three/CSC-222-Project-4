@@ -3,6 +3,7 @@ allows that data to be used in calculations and displaying the given date.*/
 #ifndef DATE_H
 #define DATE_H
 #include <string>
+#include <iostream>
 
 class Date {
 private: // Private data members
@@ -40,6 +41,19 @@ public:
     std::string getFormatMDY_num() const;
     std::string getFormatMDY_char() const;
     std::string getFormatDMY() const;
+
+    // Operator overloads
+    Date& operator++();
+    Date operator++(int);
+
+    Date& operator--();
+    Date operator--(int);
+
+    Date operator-(const Date);
+
+    // Friend overloads
+    friend std::ostream& operator<<(std::ostream&, Date&);
+    friend std::istream& operator>>(std::istream&, Date&);
 };
 
 #endif // DATE_H

@@ -1,6 +1,7 @@
 #include "Date.h"
 #include <string>
 #include <sstream>
+#include <iostream>
 
 // Constants for month numbers
 const int MONTH_JAN = 1;
@@ -334,3 +335,7 @@ std::string Date::getFormatDMY() const
 
     return format;
 }
+
+// Friend overloads
+    std::ostream& operator<<(std::ostream& out, Date& date);
+    std::istream& operator>>(std::istream& in, Date& date);
