@@ -494,7 +494,7 @@ int Date::operator-(const Date date)
 */
 std::ostream& operator<<(std::ostream& out, Date& date)
 {
-    out << date.month << " " << date.day << ", " << date.year;
+    out << date.getFormatMDY_char();
     return out;
 }
 

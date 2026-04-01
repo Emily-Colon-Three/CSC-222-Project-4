@@ -55,5 +55,11 @@ int main()
     cout << (++y).getFormatDMY() << endl;
     cout << (--y).getFormatDMY() << endl;
 
+    // Extraction and Insertion
+    Date custom;
+
+    cin >> custom;
+    cout << custom;
+
     return 0;
 }
