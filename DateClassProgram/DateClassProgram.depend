@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1773715045 source:/home/paulmichaelolsen/VPCC Assignnments/CSC 222/Project 3/DateClassProgram/main.cpp
+	<iostream>
+	"Date.h"
+
+1773709287 /home/paulmichaelolsen/VPCC Assignnments/CSC 222/Project 3/DateClassProgram/Date.h
+	<string>
+
+1773714123 source:/home/paulmichaelolsen/VPCC Assignnments/CSC 222/Project 3/DateClassProgram/Date.cpp
+	"Date.h"
+	<string>
+	<sstream>
+
