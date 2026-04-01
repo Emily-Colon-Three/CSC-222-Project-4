@@ -501,5 +501,17 @@ int Date::operator-(const Date date)
 }
 
 // Friend overloads
-    std::ostream& operator<<(std::ostream& out, Date& date);
-    std::istream& operator>>(std::istream& in, Date& date);
+/*
+    Summary: Allows the Date object to be used with cout, displaying the date with ease.
+    Parameters: An ostream object called out, which collects the stream of output to be returned, and date, a Date object reference to the date being used with insertion operator.
+    Return: The ostream object, out, putting the formatted date into the place where it was called to be inserted.
+    Preconditions: Uses cout, depends on it.
+    Postconditions: None of significance.
+*/
+std::ostream& operator<<(std::ostream& out, Date& date)
+{
+    out << date.month << " " << date.day << ", " << date.year;
+    return out;
+}
+
+std::istream& operator>>(std::istream& in, Date& date);
