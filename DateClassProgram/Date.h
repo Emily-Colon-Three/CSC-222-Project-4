@@ -13,6 +13,7 @@ private: // Private data members
 
 public:
     Date(int y, int m, int d); // Constructor
+    Date(); // Default Constructor
     ~Date(); // Destructor
 
     // Inline accessor functions

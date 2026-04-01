@@ -36,6 +36,11 @@ Date::Date(int year, int month, int day) : year(1900), month(1), day(1) // Defau
     setDate(month, day, year);
 }
 
+Date::Date()
+{
+    setDate(1, 1, 1900);
+}
+
 Date::~Date() {}; // Destructor
 
 void Date::setDate(int m, int d, int y)
