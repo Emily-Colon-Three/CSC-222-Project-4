@@ -49,7 +49,7 @@ public:
     Date& operator--();
     Date operator--(int);
 
-    Date operator-(const Date);
+    int operator-(const Date);
 
     // Friend overloads
     friend std::ostream& operator<<(std::ostream&, Date&);

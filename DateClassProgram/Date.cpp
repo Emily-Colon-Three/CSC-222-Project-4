@@ -428,6 +428,78 @@ Date Date::operator--(int)
     return temp;
 }
 
+/*
+    Summary: Finds the difference, in days, between two dates held within Date class objects.
+    Parameters: A constant Date object, date, referring to the object on the right of the minus operator.
+    Return: An integer which is the absolute number of days between two dates.
+    Preconditions: None
+    Postconditions: None
+*/
+int Date::operator-(const Date date)
+{
+    int total = 0;
+    int finalYear;
+
+    if (this->year < date.year)
+    {
+        for (int y = this->year; y < date.year; y++)
+        {
+            if (isLeapYear(y))
+            {
+                total += 366;
+            }
+            else
+            {
+                total += 365;
+            }
+
+            finalYear = y;
+        }
+    }
+    else if (this->year > date.year)
+    {
+        for (int y = date.year; y < this->year; y++)
+        {
+            if (isLeapYear(y))
+            {
+                total += 366;
+            }
+            else
+            {
+                total += 365;
+            }
+
+            finalYear = y;
+        }
+    }
+    else
+    {
+        finalYear = this->year;
+    }
+
+    // At this point, the year difference is accounted for.
+    if (this->month < date.month)
+    {
+        for (int m = this->month; m < date.month; m++)
+        {
+            total += lastDay(m, finalYear);
+        }
+
+        total += date.day - this->day;
+    }
+    if (this->month > date.month)
+    {
+        for (int m = date.month; m < this->month; m++)
+        {
+            total += lastDay(m, finalYear);
+        }
+
+        total += this->day - date.day;
+    }
+
+    return total;
+}
+
 // Friend overloads
     std::ostream& operator<<(std::ostream& out, Date& date);
     std::istream& operator>>(std::istream& in, Date& date);
