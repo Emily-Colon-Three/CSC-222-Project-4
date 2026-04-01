@@ -514,4 +514,26 @@ std::ostream& operator<<(std::ostream& out, Date& date)
     return out;
 }
 
-std::istream& operator>>(std::istream& in, Date& date);
+/*
+    Summary: Allows the Date object to be used with cin, extracting input to set the object's date. Only valid dates will work.
+    Parameters: istream reference in, which is the source of input for this overload, and date, a reference to a Date object being extracted into.
+    Return: The istream reference, in.
+    Preconditions: The user must enter valid data to have the date be actually set, thanks to built-in validation.
+    Postconditions: Uses cout to print messages to terminal. Sets the date of the object in parameters.
+*/
+std::istream& operator>>(std::istream& in, Date& date)
+{
+    int y, m, d;
+
+    std::cout << "What is the day?\n";
+    in >> d;
+
+    std::cout << "What is the month?\n";
+    in >> m;
+
+    std::cout << "What is the year?\n";
+    in >> y;
+
+    date.setDate(m, d, y); // Sets date with input.
+    return in;
+}
