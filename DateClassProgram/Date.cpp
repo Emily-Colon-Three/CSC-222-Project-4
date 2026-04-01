@@ -424,7 +424,7 @@ Date Date::operator--(int)
 {
     Date temp = *this;
 
-    ++*this;
+    --*this;
     return temp;
 }
 
