@@ -4,9 +4,27 @@ It compares those two values, charging a fee starting at $25 and increasing by $
 #ifndef PARKINGTICKET_H
 #define PARKINGTICKET_H
 
+#include <string>
+
 class ParkingTicket {
+public:
+    std::string officerName;
+    int officerBadge;
 
+    int minutesBought;
+    int minutesParked;
 
+    std::string carBrand;
+    std::string carModel;
+    std::string carColor;
+    int carLicense;
+
+    ParkingTicket(std::string name, int badge, int timeBought, int timeUsed, std::string brand, std::string model, std::string color, int cl);
+
+private:
+    int calculateFee();
+
+    void displayTicket();
 };
 
 #endif // PARKINGTICKET_H

@@ -9,13 +9,16 @@
 1775086503 source:/home/paulmichaelolsen/VPCC Assignnments/CSC 222/M4 Programming Project/ParkingTicketSimulator/ParkingMeter.cpp
 	"ParkingTicket.h"
 
-1775083011 /home/paulmichaelolsen/VPCC Assignnments/CSC 222/M4 Programming Project/ParkingTicketSimulator/ParkingTicket.h
+1775094649 /home/paulmichaelolsen/VPCC Assignnments/CSC 222/M4 Programming Project/ParkingTicketSimulator/ParkingTicket.h
+	<string>
 
 1775081353 source:/home/paulmichaelolsen/VPCC Assignnments/CSC 222/M4 Programming Project/ParkingTicketSimulator/ParkingTicket.cpp
 	"ParkingTicket.h"
 
-1775081302 source:/home/paulmichaelolsen/VPCC Assignnments/CSC 222/M4 Programming Project/ParkingTicketSimulator/PoliceOfficer.cpp
+1775087931 source:/home/paulmichaelolsen/VPCC Assignnments/CSC 222/M4 Programming Project/ParkingTicketSimulator/PoliceOfficer.cpp
 	"PoliceOfficer.h"
+	<string>
+	<iostream>
 
 1775087160 /home/paulmichaelolsen/VPCC Assignnments/CSC 222/M4 Programming Project/ParkingTicketSimulator/PoliceOfficer.h
 	<string>
