@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1775086108 source:/home/paulmichaelolsen/VPCC Assignnments/CSC 222/M4 Programming Project/ParkingTicketSimulator/main.cpp
+1775086169 source:/home/paulmichaelolsen/VPCC Assignnments/CSC 222/M4 Programming Project/ParkingTicketSimulator/main.cpp
 	<iostream>
 	"PoliceOfficer.h"
 	"ParkedCar.h"
 	"ParkingMeter.h"
 	"ParkingTicket.h"
 
-1775081329 source:/home/paulmichaelolsen/VPCC Assignnments/CSC 222/M4 Programming Project/ParkingTicketSimulator/ParkingMeter.cpp
+1775086503 source:/home/paulmichaelolsen/VPCC Assignnments/CSC 222/M4 Programming Project/ParkingTicketSimulator/ParkingMeter.cpp
 	"ParkingTicket.h"
 
 1775083011 /home/paulmichaelolsen/VPCC Assignnments/CSC 222/M4 Programming Project/ParkingTicketSimulator/ParkingTicket.h
@@ -17,7 +17,11 @@
 1775081302 source:/home/paulmichaelolsen/VPCC Assignnments/CSC 222/M4 Programming Project/ParkingTicketSimulator/PoliceOfficer.cpp
 	"PoliceOfficer.h"
 
-1775083089 /home/paulmichaelolsen/VPCC Assignnments/CSC 222/M4 Programming Project/ParkingTicketSimulator/PoliceOfficer.h
+1775087160 /home/paulmichaelolsen/VPCC Assignnments/CSC 222/M4 Programming Project/ParkingTicketSimulator/PoliceOfficer.h
+	<string>
+	"ParkingTicket.h"
+	"ParkedCar.h"
+	"ParkingMeter.h"
 
 1775085990 source:/home/paulmichaelolsen/VPCC Assignnments/CSC 222/M4 Programming Project/ParkingTicketSimulator/ParkedCar.cpp
 	"ParkedCar.h"
@@ -26,5 +30,5 @@
 1775086131 /home/paulmichaelolsen/VPCC Assignnments/CSC 222/M4 Programming Project/ParkingTicketSimulator/ParkedCar.h
 	<string>
 
-1775082444 /home/paulmichaelolsen/VPCC Assignnments/CSC 222/M4 Programming Project/ParkingTicketSimulator/ParkingMeter.h
+1775086456 /home/paulmichaelolsen/VPCC Assignnments/CSC 222/M4 Programming Project/ParkingTicketSimulator/ParkingMeter.h
 

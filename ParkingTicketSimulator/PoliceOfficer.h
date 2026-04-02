@@ -3,9 +3,18 @@ it creates a ParkingTicket object. Additionally, it holds the officer's name and
 #ifndef POLICEOFFICER_H
 #define POLICEOFFICER_H
 
+#include <string>
+#include "ParkingTicket.h"
+#include "ParkedCar.h"
+#include "ParkingMeter.h"
+
 class PoliceOfficer {
+private:
+    std::string name;
+    int badgeNumber;
 
-
+public:
+    void inspectCar(ParkedCar& car, ParkingMeter& meter);
 };
 
 #endif // POLICEOFFICER_H

@@ -3,7 +3,8 @@
 #define PARKINGMETER_H
 
 class ParkingMeter {
-
+public:
+    int minutesPurchased;
 
 };
 
