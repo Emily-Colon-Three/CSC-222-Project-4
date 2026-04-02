@@ -6,6 +6,7 @@ class ParkingMeter {
 public:
     int minutesPurchased;
 
+    ParkingMeter(int minutes);
 };
 
 #endif // PARKINGMETER_H

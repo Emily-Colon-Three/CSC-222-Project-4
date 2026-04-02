@@ -49,6 +49,7 @@ int ParkingTicket::calculateFee()
 */
 void ParkingTicket::displayTicket()
 {
+    std::cout << "PARKING TICKET\n\n";
     std::cout << "Officer Name: " << this->officerName << std::endl;
     std::cout << "Badge Number: " << this->officerBadge << std::endl << std::endl;
 

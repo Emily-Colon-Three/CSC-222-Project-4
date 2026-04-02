@@ -13,7 +13,10 @@ private:
     std::string name;
     int badgeNumber;
 
+    ParkingTicket& issueTicket(int timePaid, int timeUsed, ParkedCar& offender);
+
 public:
+    PoliceOfficer(std::string name, int badge);
     void inspectCar(ParkedCar& car, ParkingMeter& meter);
 };
 

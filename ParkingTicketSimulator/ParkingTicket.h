@@ -21,10 +21,10 @@ public:
 
     ParkingTicket(std::string name, int badge, int timeBought, int timeUsed, std::string brand, std::string model, std::string color, int cl);
 
+    void displayTicket();
+
 private:
     int calculateFee();
-
-    void displayTicket();
 };
 
 #endif // PARKINGTICKET_H
